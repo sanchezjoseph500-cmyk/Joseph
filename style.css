@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --color-dark: #231f20;
+    --color-red: #e63025;
+    --color-yellow: #ffd800;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 40px; 
+    height: 100%;
+    background-color: black;
+    background-image: url('clancy\ stole.webp');
+    background-repeat: repeat-y; 
+    background-size: contain; 
+    background-position: center;
+    z-index: 10;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background-color: black;
+    background-image: url('clancy\ stole.webp');
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-position: center;
+    z-index: 10;
+}
+
+body {
+    background-color: var(--color-dark);
+    color: var(--color-yellow);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('clancy fondo.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 0;
+}
+
+.hero h1,
+.hero p,
+.hero .btn {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--color-red);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--color-yellow);
+}
+
+.btn {
+    background-color: var(--color-red);
+    color: var(--color-yellow);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+section {
+    padding: 100px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--color-dark);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--color-red);
+    font-weight: 700;
+}
+
+.skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.skills li {
+    background-color: var(--color-red);
+    color: var(--color-yellow);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.skills li:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-dark);
+    transform: translateY(-3px);
+}
+
+.contacto p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: var(--color-yellow);
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--color-dark);
+    color: var(--color-yellow);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    .skills ul {
+        flex-direction: column;
+    }
+    body::before,
+    body::after {
+        width: 20px;
+    }
+}
